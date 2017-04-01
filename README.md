@@ -1,4 +1,4 @@
-# learn
+# Learn
 * 개인 학습 저장소입니다.
 
 ### Angularjs 기초편
