@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>dataBinding</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+</head>
+<body ng-controller="TextController">
+	<p>{{text.message}}</p>
+
+	<script type="text/javascript">
+	var myAppModule = angular.module('myApp',[]);
+
+	myAppModule.controller('TextController', function($scope){
+		var someText = {};
+		someText.message = '지금 여러분의 여정은 시작됐습니다.';
+		$scope.text = someText;
+	});
+	</script>
+</body>
+</html>
