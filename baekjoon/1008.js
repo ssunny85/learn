@@ -8,4 +8,5 @@ rl.on('line', function(line) {
 	var a = parseInt(num[0]);
 	var b = parseInt(num[1]);
 	console.log(a / b);
+	rl.close();
 });
