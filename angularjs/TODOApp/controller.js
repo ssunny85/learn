@@ -30,4 +30,14 @@ app.controller('TodoCtrl',function($scope){
 			$scope.todos.splice(idx,1);
 		}
 	}
+
+	$scope.add = function(newTodoTitle){
+		var newTodo = {
+			title : newTodoTitle,
+			completed : false,
+			createdAt : Date.now()
+		};
+		$scope.todos.push(newTodo);
+		$scope.newTodoTitle = '';
+	}
 });

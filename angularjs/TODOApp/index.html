@@ -11,6 +11,13 @@
 <body>
 <div class="todo-container" ng-controller="TodoCtrl">
 	<h1>TODO</h1>
+	<form name="todoForm" ng-submit="add(newTodoTitle);">
+		<div class="todo-form">
+			<input type="text" placeholder="새로운 Todo 입력하세요." autofocus="true" ng-model="newTodoTitle" />
+			<button type="submit">추가</button>
+		</div>
+	</form>
+	<h2>TODO List</h2>
 	<ul class="todo-list">
 		<li ng-repeat="todo in todos | filter:statusFilter">
 			<div class="todo-item">
