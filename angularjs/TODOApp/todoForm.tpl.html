@@ -1,0 +1,9 @@
+<form name="todoForm" ng-submit="add(newTodoTitle);">
+	<div class="todo-form">
+		<input type="text" placeholder="새로운 Todo 입력하세요." autofocus="true" ng-model="newTodoTitle" minlength="5" />
+		<button type="submit">추가</button>
+	</div>
+	<div class="alert-warning" ng-show="todoForm.$dirty && todoForm.$invalid">
+		<span>5글자 이상 입력하세요.</span>
+	</div>
+</form>
