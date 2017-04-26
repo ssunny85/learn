@@ -1,24 +1,5 @@
-angular.module('todo').controller('TodoCtrl',function($scope){
-	$scope.todos = [
-		{
-			title : '요가 수행',
-			completed : false,
-			createdAt : Date.now(),
-			id : 0
-		},
-		{
-			title : 'angular 학습',
-			completed : false,
-			createdAt : Date.now(),
-			id : 1
-		},
-		{
-			title : '운동하기',
-			completed : true,
-			createdAt : Date.now(),
-			id : 2
-		}
-	];
+angular.module('todo').controller('TodoCtrl',function($scope, todoStorage){
+	$scope.todos = todoStorage.get();
 
 	$scope.remove = function(todo){
 		var idx = $scope.todos.findIndex(function(item){
