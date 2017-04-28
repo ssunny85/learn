@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="myapp">
+<head>
+<meta charset="utf-8">
+<title>예제</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script type="text/javascript" src="studentsListController.js"></script>
+</head>
+<body ng-controller="studentsListController">
+<ul>
+	<li ng-repeat="student in students">
+		<span>{{$index + 1}}.</span>
+		<a href="/view/{{student.id}}">{{student.name}}</a>
+	</li>
+</ul>
+<button type="button" ng-click="add();">추가</button>
+</body>
+</html>

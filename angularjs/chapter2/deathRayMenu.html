@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="myapp">
+<head>
+<meta charset="utf-8">
+<title>예제</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script type="text/javascript" src="menucontroller.js"></script>
+</head>
+<body>
+<div ng-controller="MenuController">
+	<button type="button" ng-click="toggleMenu();">menu on/off</button>
+	<ul ng-show="showMenu">
+		<li ng-repeat="item in menus"><a href="/view/{{item.id}}">{{item.name}}</a></li>
+	</ul>
+</div>
+</body>
+</html>
